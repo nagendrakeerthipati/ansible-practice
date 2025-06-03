@@ -4,7 +4,6 @@
   tasks:
     - name: ping the Server
       ansible.builtin.ping:
-        msg: "ping is successfull"
 
     - name: installing nginx
       ansible.builtin.package:
