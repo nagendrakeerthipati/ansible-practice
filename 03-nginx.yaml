@@ -2,13 +2,17 @@
   hosts: frontend
   become: true
   tasks:
-  - name: installing nginx
-    ansible.builtin.package:
-      name: nginx
-      state: present
+    - name: ping the Server
+      ansible.builtin.ping:
+        msg: "ping is successfull"
 
-  - name: enabling nginx
-    ansible.builtin.service:
-      name: nginx
-      state: started
-      enabled: true
+    - name: installing nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+    - name: enabling nginx
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
