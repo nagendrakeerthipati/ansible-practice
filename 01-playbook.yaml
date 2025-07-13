@@ -1,6 +1,6 @@
 - name: ping the server
   hosts: frontend
-  become: true
+  become: true #( gives sudo access)
   tasks: #list of tasks
     - name: ping the Server
       ansible.builtin.ping:
